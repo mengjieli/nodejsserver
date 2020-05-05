@@ -2,14 +2,14 @@ var app = require('express')();
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
-var privateKey  = fs.readFileSync('/path/to/private.pem', 'utf8');
-var certificate = fs.readFileSync('/path/to/file.crt', 'utf8');
+var privateKey  = fs.readFileSync('./xiaoxxgame.com/Nginx/2_xiaoxxgame.com.key', 'utf8');
+var certificate = fs.readFileSync('./xiaoxxgame.com/Nginx/1_xiaoxxgame.com_bundle.crt', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-var PORT = 18080;
-var SSLPORT = 18081;
+var PORT = 3000;
+var SSLPORT = 3001;
 
 httpServer.listen(PORT, function() {
     console.log('HTTP Server is running on: http://localhost:%s', PORT);
