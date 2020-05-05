@@ -1,0 +1,7 @@
+./configure --prefix=/usr/local/webserver/nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre=/usr/local/src/pcre-8.35
+[root@bogon nginx-1.6.2]# make
+[root@bogon nginx-1.6.2]# make install
+
+————————————————
+版权声明：本文为CSDN博主「轻量开发」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/nfq6612/article/details/88353781
