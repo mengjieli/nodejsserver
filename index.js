@@ -19,7 +19,7 @@ httpsServer.listen(SSLPORT, function() {
 });
 
 // Welcome
-app.get('/', function(req, res) {
+app.get('/auth', function(req, res) {
     if(req.protocol === 'https') {
         res.status(200).send('Welcome to Safety Land!');
     }
